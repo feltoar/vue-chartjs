@@ -57,7 +57,9 @@ module.exports = {
             if (newData.hasOwnProperty('yLabels')) {
               chart.data.yLabels = newData.yLabels
             }
-            chart.update()
+            // chart.update()
+            chart.destroy()
+            this.renderChart(this.chartData, this.options)
           } else {
             chart.destroy()
             this.renderChart(this.chartData, this.options)
